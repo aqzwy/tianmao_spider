@@ -34,7 +34,7 @@ def get_url():
         'upgrade-insecure-requests': '1'
     }
     proxy = {
-        'http': '111.72.155.121:9999'
+        'http': '111.72.155.121:9999'  # 代理ip，可自行设置
     }
     resp = requests.get(url=tianmao_url, headers=headers, proxies=proxy)
     resp.encoding = 'gbk'
