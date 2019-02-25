@@ -62,9 +62,10 @@ def get_items_images(img_src, title):
     time.sleep(1)  # 设置1s延时
 
 
-def get_content(html_page):
-    parser = etree.HTMLParser(encoding='gbk')
-    html = etree.parse(html_page, parser=parser)
+def get_content(text):
+#     parser = etree.HTMLParser(encoding='gbk')
+#     html = etree.parse(text, parser=parser)
+    html = etree.HTML(text)
     divs = html.xpath("//div[@class='product-iWrap']")
     for div in divs:
         price = div.xpath("./p[@class='productPrice']//@title")[0]
@@ -110,7 +111,8 @@ def to_csv(filename):
 
 
 def main():
-    get_content('tianmao_1.html')  # 读取第一页的html文件作为样例
+#     get_content('tianmao_1.html')  # 若被反爬机制限制，读取第一页已保存的html文件作为样例
+    get_content(get_url())
     to_csv('天猫Python相关图书信息.csv')
 
 
