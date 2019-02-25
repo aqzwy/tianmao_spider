@@ -103,14 +103,14 @@ def to_csv(filename):
     for i in range(0, 6):
         sheet.write(0, i, col[i])
     for i in range(len(products_list)):
-        data = products_list[i]  #
+        data = products_list[i]  
         for j in range(0, 6):
             sheet.write(i + 1, j, data[col[j]])
     book.save(filename)
 
 
 def main():
-    get_content('tianmao_1.html')
+    get_content('tianmao_1.html')  # 读取第一页的html文件作为样例
     to_csv('天猫Python相关图书信息.csv')
 
 
