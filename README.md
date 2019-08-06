@@ -82,4 +82,4 @@ Python机器学习与量化投资+零起点 Python大数据与量化交易+机�
  - MIT License 
  
 ## Aurthor
-- xzj @ 2019-2-25
+- Zijun Xi @ 2019-2-25
